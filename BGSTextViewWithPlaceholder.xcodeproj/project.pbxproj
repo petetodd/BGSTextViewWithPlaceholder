@@ -23,6 +23,7 @@
 		D04D063319B33AD40047D0AF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D04D063119B33AD40047D0AF /* InfoPlist.strings */; };
 		D04D063519B33AD40047D0AF /* BGSTextViewWithPlaceholderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D04D063419B33AD40047D0AF /* BGSTextViewWithPlaceholderTests.m */; };
 		D04D064119B33B740047D0AF /* BGSTextViewWithPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = D04D064019B33B740047D0AF /* BGSTextViewWithPlaceholder.m */; };
+		D04D064319B363150047D0AF /* BGSTextViewWithPlaceholder.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D04D064219B363150047D0AF /* BGSTextViewWithPlaceholder.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		D04D063419B33AD40047D0AF /* BGSTextViewWithPlaceholderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BGSTextViewWithPlaceholderTests.m; sourceTree = "<group>"; };
 		D04D063F19B33B740047D0AF /* BGSTextViewWithPlaceholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGSTextViewWithPlaceholder.h; sourceTree = "<group>"; };
 		D04D064019B33B740047D0AF /* BGSTextViewWithPlaceholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGSTextViewWithPlaceholder.m; sourceTree = "<group>"; };
+		D04D064219B363150047D0AF /* BGSTextViewWithPlaceholder.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BGSTextViewWithPlaceholder.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 		D04D05FA19B33AD40047D0AF = {
 			isa = PBXGroup;
 			children = (
+				D04D064219B363150047D0AF /* BGSTextViewWithPlaceholder.podspec */,
 				D04D063E19B33B740047D0AF /* BGSTextView */,
 				D04D060C19B33AD40047D0AF /* BGSTextViewWithPlaceholder */,
 				D04D062E19B33AD40047D0AF /* BGSTextViewWithPlaceholderTests */,
@@ -248,6 +251,7 @@
 				D04D061D19B33AD40047D0AF /* Main_iPad.storyboard in Resources */,
 				D04D062219B33AD40047D0AF /* Images.xcassets in Resources */,
 				D04D061A19B33AD40047D0AF /* Main_iPhone.storyboard in Resources */,
+				D04D064319B363150047D0AF /* BGSTextViewWithPlaceholder.podspec in Resources */,
 				D04D061119B33AD40047D0AF /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,6 +13,8 @@
 @end
 
 @implementation BGSTextViewWithPlaceholder
+@synthesize strPlaceholder = _strPlaceholder;
+
 
 - (instancetype)initWithCoder:(NSCoder *)coder
 {
@@ -151,6 +153,13 @@
     // and then display text in center
 }
 
+// Custom setter to show label if neccessary
+-(void)setStrPlaceholder:(NSAttributedString *)strPlaceholder
+{
+   _strPlaceholder = strPlaceholder;
+
+    [self configTextView];
+}
 
 
 

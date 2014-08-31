@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Bright Green Star. All rights reserved.
 //
 /*
-    This aim of this development is to create a UITextView class that performs has a standard UITextView but also
+    This aim of this development is to create a UITextView class that performs as a standard UITextView but also
     enables the inclusion of placeholder text.  Similar to UITextField.
     Requirements
     1 - should accept a string to display as placeholder text

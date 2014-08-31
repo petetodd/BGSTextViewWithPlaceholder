@@ -146,11 +146,7 @@
     [self.lblPlaceholder setAttributedText:[self strPlaceholder]];
   //  [self setBackgroundColor:[UIColor clearColor]];
     [self addSubview:self.lblPlaceholder];
-    
-    
-    // We need to position the label
-    // We will set to same frame size as TV
-    // and then display text in center
+
 }
 
 // Custom setter to show label if neccessary

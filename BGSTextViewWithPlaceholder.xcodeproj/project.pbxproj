@@ -22,6 +22,7 @@
 		D04D062B19B33AD40047D0AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04D060A19B33AD40047D0AF /* UIKit.framework */; };
 		D04D063319B33AD40047D0AF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D04D063119B33AD40047D0AF /* InfoPlist.strings */; };
 		D04D063519B33AD40047D0AF /* BGSTextViewWithPlaceholderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D04D063419B33AD40047D0AF /* BGSTextViewWithPlaceholderTests.m */; };
+		D04D064119B33B740047D0AF /* BGSTextViewWithPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = D04D064019B33B740047D0AF /* BGSTextViewWithPlaceholder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		D04D063019B33AD40047D0AF /* BGSTextViewWithPlaceholderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BGSTextViewWithPlaceholderTests-Info.plist"; sourceTree = "<group>"; };
 		D04D063219B33AD40047D0AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D04D063419B33AD40047D0AF /* BGSTextViewWithPlaceholderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BGSTextViewWithPlaceholderTests.m; sourceTree = "<group>"; };
+		D04D063F19B33B740047D0AF /* BGSTextViewWithPlaceholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGSTextViewWithPlaceholder.h; sourceTree = "<group>"; };
+		D04D064019B33B740047D0AF /* BGSTextViewWithPlaceholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGSTextViewWithPlaceholder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +87,7 @@
 		D04D05FA19B33AD40047D0AF = {
 			isa = PBXGroup;
 			children = (
+				D04D063E19B33B740047D0AF /* BGSTextView */,
 				D04D060C19B33AD40047D0AF /* BGSTextViewWithPlaceholder */,
 				D04D062E19B33AD40047D0AF /* BGSTextViewWithPlaceholderTests */,
 				D04D060519B33AD40047D0AF /* Frameworks */,
@@ -153,6 +157,15 @@
 				D04D063119B33AD40047D0AF /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D04D063E19B33B740047D0AF /* BGSTextView */ = {
+			isa = PBXGroup;
+			children = (
+				D04D063F19B33B740047D0AF /* BGSTextViewWithPlaceholder.h */,
+				D04D064019B33B740047D0AF /* BGSTextViewWithPlaceholder.m */,
+			);
+			path = BGSTextView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +269,7 @@
 			files = (
 				D04D062019B33AD40047D0AF /* BGSViewController.m in Sources */,
 				D04D061319B33AD40047D0AF /* main.m in Sources */,
+				D04D064119B33B740047D0AF /* BGSTextViewWithPlaceholder.m in Sources */,
 				D04D061719B33AD40047D0AF /* BGSAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,6 +485,7 @@
 				D04D063A19B33AD40047D0AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D04D063B19B33AD40047D0AF /* Build configuration list for PBXNativeTarget "BGSTextViewWithPlaceholderTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +494,7 @@
 				D04D063D19B33AD40047D0AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

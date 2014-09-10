@@ -152,6 +152,8 @@
 // Custom setter to show label if neccessary
 -(void)setStrPlaceholder:(NSAttributedString *)strPlaceholder
 {
+    [self.lblPlaceholder setText:@""];
+
    _strPlaceholder = strPlaceholder;
 
     [self configTextView];

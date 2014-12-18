@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "BGSTextViewWithPlaceholder"
-  s.version      = "0.1"
+  s.version      = "0.2"
   s.summary      = "Custom UITextView class that performs as a standard UITextView but includes placeholder text."
 
   s.description  = <<-DESC

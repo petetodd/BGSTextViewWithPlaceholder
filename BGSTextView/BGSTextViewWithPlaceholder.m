@@ -35,14 +35,6 @@
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
 
 -(void)configTextView
 {
@@ -87,22 +79,36 @@
 }
 
 
+
 - (void)textDidChange:(NSNotification *)notification
 {
-    [self.lblPlaceholder removeFromSuperview];
+    if (self.lblPlaceholder)
+    {
+        [self.lblPlaceholder removeFromSuperview];
+        [self setLblPlaceholder:Nil];
+        
+    }
 }
 
 - (void)editDidBegin:(NSNotification *)notification
 {
-    [self.lblPlaceholder removeFromSuperview];
-}
+    if (self.lblPlaceholder)
+    {
+        [self.lblPlaceholder removeFromSuperview];
+        [self setLblPlaceholder:Nil];
+        
+    }}
 
 - (void)editDidEnd:(NSNotification *)notification
 {
     if (self.text.length > 0)
     {
-        [self.lblPlaceholder removeFromSuperview];
-        return;
+        if (self.lblPlaceholder)
+        {
+            [self.lblPlaceholder removeFromSuperview];
+            [self setLblPlaceholder:Nil];
+            
+        }        return;
     }else
     {
         [self configLabel];
@@ -111,11 +117,15 @@
 }
 
 
+
+
 -(void)configLabel
 {
     if (self.text.length > 0)
     {
         [self.lblPlaceholder removeFromSuperview];
+        [self setLblPlaceholder:Nil];
+        
         return;
     }
     CGRect frameLbl = self.bounds;
@@ -131,9 +141,9 @@
     }
     // Set the placeholder poistion.
     CGRect frameLblUpd = CGRectMake(frameLbl.origin.x, frameLbl.origin.y, widthlbl, heightLbl);
-    self.lblPlaceholder = [[UILabel alloc]initWithFrame:frameLblUpd];
-
-
+    if (!self.lblPlaceholder)    self.lblPlaceholder = [[UILabel alloc]initWithFrame:frameLblUpd];
+    
+    
     // Default the text color but will be updated by Attributed string properties
     [self.lblPlaceholder setTextColor:[UIColor lightGrayColor]];
     
@@ -142,22 +152,34 @@
     {
         [self.lblPlaceholder setNumberOfLines:self.intLines];
     }
-
+    
     [self.lblPlaceholder setAttributedText:[self strPlaceholder]];
-  //  [self setBackgroundColor:[UIColor clearColor]];
+    if ([self sizeLblToFit])
+    {
+        [self.lblPlaceholder sizeToFit];
+    }
+    //  [self setBackgroundColor:[UIColor clearColor]];
     [self addSubview:self.lblPlaceholder];
-
+    
 }
+
 
 // Custom setter to show label if neccessary
 -(void)setStrPlaceholder:(NSAttributedString *)strPlaceholder
 {
     [self.lblPlaceholder setText:@""];
-
-   _strPlaceholder = strPlaceholder;
-
+    _strPlaceholder = strPlaceholder;
+    
     [self configTextView];
 }
+
+// Method to clear placehodler
+
+- (void)clearPlaceholder
+{
+    [self textDidChange:Nil];
+}
+
 
 
 

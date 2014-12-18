@@ -14,7 +14,7 @@
 		<string>https://github.com/petetodd/BGSTextViewWithPlaceholder.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>BGSTextViewWithPlaceholder.xcodeproj/project.xcworkspace</string>
+	<string>BGSTextViewWithPlaceholder.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>0307F6BF340202F9C4CAA2C1105D9340EC75EC99</key>

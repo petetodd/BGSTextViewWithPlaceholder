@@ -34,7 +34,11 @@
 @property int intLines; // The maximum number of lines to use to display text
 @property int intHeight; // Optional Height
 @property int intWidth; // Optional Width
-//@property (strong, nonatomic) UIFont *fontPlaceholder; // FOnt to uset o render text
+
+@property BOOL sizeLblToFit; // Optional size label to fit
+
+- (void)clearPlaceholder; // Used when Textview is in edit mode and might already be populated
+
 
 @property BOOL sizeLblToFit; // Optional Alignment
 

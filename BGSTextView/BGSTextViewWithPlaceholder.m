@@ -34,7 +34,6 @@
     return self;
 }
 
-<<<<<<< HEAD
 /*
  // Only override drawRect: if you perform custom drawing.
  // An empty implementation adversely affects performance during animation.
@@ -43,8 +42,7 @@
  // Drawing code
  }
  */
-=======
->>>>>>> FETCH_HEAD
+
 
 -(void)configTextView
 {
@@ -166,15 +164,11 @@
     [self.lblPlaceholder setAttributedText:[self strPlaceholder]];
     if ([self sizeLblToFit])
     {
-<<<<<<< HEAD
         self.lblPlaceholder.adjustsFontSizeToFitWidth=YES;
         self.lblPlaceholder.minimumScaleFactor=0.1;
     }
-=======
-        [self.lblPlaceholder sizeToFit];
-    }
-    //  [self setBackgroundColor:[UIColor clearColor]];
->>>>>>> FETCH_HEAD
+
+
     [self addSubview:self.lblPlaceholder];
     
 }

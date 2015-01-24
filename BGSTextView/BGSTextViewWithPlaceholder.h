@@ -40,9 +40,7 @@
 - (void)clearPlaceholder; // Used when Textview is in edit mode and might already be populated
 
 
-@property BOOL sizeLblToFit; // Optional Alignment
 
-- (void)clearPlaceholder; // Used when Textview is in edit mode and might already be populated
 
 
 @end

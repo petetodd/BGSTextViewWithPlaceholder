@@ -34,12 +34,10 @@
     [str addAttribute:NSBackgroundColorAttributeName value:[UIColor yellowColor] range:NSMakeRange(2,2)];
     [str addAttribute:NSForegroundColorAttributeName value:[UIColor greenColor] range:NSMakeRange(7,1)];
     [str addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"HelveticaNeue-Bold" size:20.0] range:NSMakeRange(6, 2)];
-<<<<<<< HEAD
 
-=======
     
     [self.tvTest1 setIntLines:3];
->>>>>>> FETCH_HEAD
+
     [self.tvTest1 setStrPlaceholder:str];
     
     // Test 2 - size to fit

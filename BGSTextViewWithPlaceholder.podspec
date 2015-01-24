@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "BGSTextViewWithPlaceholder"
-  s.version      = "0.3"
+  s.version      = "0.3.1"
   s.summary      = "Custom UITextView class that performs as a standard UITextView but includes placeholder text."
 
   s.description  = <<-DESC
@@ -77,7 +77,7 @@ Pod::Spec.new do |s|
   #
 
   s.source       = { :git => "https://github.com/petetodd/BGSTextViewWithPlaceholder.git", 
-                     :tag => "0.3" }
+                     :tag => "0.3.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

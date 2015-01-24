@@ -3,13 +3,12 @@
 //  BGSTextViewWithPlaceholder
 //
 //  Created by Peter Todd Air on 30/08/2014.
-//  Copyright (c) 2014 Bright Green Star. All rights reserved.
 //
 
 #import "BGSTextViewWithPlaceholder.h"
 
 @interface BGSTextViewWithPlaceholder ()
-    @property (strong, nonatomic) UILabel *lblPlaceholder;
+@property (strong, nonatomic) UILabel *lblPlaceholder;
 @end
 
 @implementation BGSTextViewWithPlaceholder
@@ -36,28 +35,28 @@
 }
 
 /*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
+ // Only override drawRect: if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ - (void)drawRect:(CGRect)rect
+ {
+ // Drawing code
+ }
+ */
 
 -(void)configTextView
 {
     // Test
     /*
-    if (!self.strPlaceholder)
-    {
-        NSMutableAttributedString *str = [[NSMutableAttributedString alloc] initWithString:@"TEST LABEL but very long but very long but very long but very long but very long but very long ."];
-        [str addAttribute:NSBackgroundColorAttributeName value:[UIColor yellowColor] range:NSMakeRange(2,2)];
-        [str addAttribute:NSForegroundColorAttributeName value:[UIColor greenColor] range:NSMakeRange(7,1)];
-        [str addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"HelveticaNeue-Bold" size:20.0] range:NSMakeRange(6, 2)];
-        [self setStrPlaceholder:str];
-    }
+     if (!self.strPlaceholder)
+     {
+     NSMutableAttributedString *str = [[NSMutableAttributedString alloc] initWithString:@"TEST LABEL but very long but very long but very long but very long but very long but very long ."];
+     [str addAttribute:NSBackgroundColorAttributeName value:[UIColor yellowColor] range:NSMakeRange(2,2)];
+     [str addAttribute:NSForegroundColorAttributeName value:[UIColor greenColor] range:NSMakeRange(7,1)];
+     [str addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"HelveticaNeue-Bold" size:20.0] range:NSMakeRange(6, 2)];
+     [self setStrPlaceholder:str];
+     }
      */
-
+    
     
     
     
@@ -65,7 +64,7 @@
     {
         [self configNotifications];
         [self configLabel];
-
+        
         
     }
 }
@@ -74,7 +73,7 @@
 {
     NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
     [notificationCenter addObserver:self selector:@selector(textDidChange:)
-                          name:UITextViewTextDidChangeNotification object:self];
+                               name:UITextViewTextDidChangeNotification object:self];
     
     [notificationCenter addObserver:self selector:@selector(editDidBegin:)
                                name:UITextViewTextDidBeginEditingNotification object:self];
@@ -82,27 +81,40 @@
     
     [notificationCenter addObserver:self selector:@selector(editDidEnd:)
                                name:UITextViewTextDidEndEditingNotification object:self];
-
+    
     
 }
 
 
 - (void)textDidChange:(NSNotification *)notification
 {
-    [self.lblPlaceholder removeFromSuperview];
+    if (self.lblPlaceholder)
+    {
+        [self.lblPlaceholder removeFromSuperview];
+        [self setLblPlaceholder:Nil];
+        
+    }
 }
 
 - (void)editDidBegin:(NSNotification *)notification
 {
-    [self.lblPlaceholder removeFromSuperview];
-}
+    if (self.lblPlaceholder)
+    {
+        [self.lblPlaceholder removeFromSuperview];
+        [self setLblPlaceholder:Nil];
+        
+    }}
 
 - (void)editDidEnd:(NSNotification *)notification
 {
     if (self.text.length > 0)
     {
-        [self.lblPlaceholder removeFromSuperview];
-        return;
+        if (self.lblPlaceholder)
+        {
+            [self.lblPlaceholder removeFromSuperview];
+            [self setLblPlaceholder:Nil];
+            
+        }        return;
     }else
     {
         [self configLabel];
@@ -116,6 +128,8 @@
     if (self.text.length > 0)
     {
         [self.lblPlaceholder removeFromSuperview];
+        [self setLblPlaceholder:Nil];
+        
         return;
     }
     CGRect frameLbl = self.bounds;
@@ -131,9 +145,9 @@
     }
     // Set the placeholder poistion.
     CGRect frameLblUpd = CGRectMake(frameLbl.origin.x, frameLbl.origin.y, widthlbl, heightLbl);
-    self.lblPlaceholder = [[UILabel alloc]initWithFrame:frameLblUpd];
-
-
+    if (!self.lblPlaceholder)    self.lblPlaceholder = [[UILabel alloc]initWithFrame:frameLblUpd];
+    
+    
     // Default the text color but will be updated by Attributed string properties
     [self.lblPlaceholder setTextColor:[UIColor lightGrayColor]];
     
@@ -142,21 +156,31 @@
     {
         [self.lblPlaceholder setNumberOfLines:self.intLines];
     }
-
+    
     [self.lblPlaceholder setAttributedText:[self strPlaceholder]];
-  //  [self setBackgroundColor:[UIColor clearColor]];
+    if ([self sizeLblToFit])
+    {
+        self.lblPlaceholder.adjustsFontSizeToFitWidth=YES;
+        self.lblPlaceholder.minimumScaleFactor=0.1;
+    }
     [self addSubview:self.lblPlaceholder];
-
+    
 }
 
 // Custom setter to show label if neccessary
 -(void)setStrPlaceholder:(NSAttributedString *)strPlaceholder
 {
     [self.lblPlaceholder setText:@""];
-
-   _strPlaceholder = strPlaceholder;
-
+    _strPlaceholder = strPlaceholder;
+    
     [self configTextView];
+}
+
+// Method to clear placehodler
+
+- (void)clearPlaceholder
+{
+    [self textDidChange:Nil];
 }
 
 

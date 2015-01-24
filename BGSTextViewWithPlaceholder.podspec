@@ -16,11 +16,12 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "BGSTextViewWithPlaceholder"
-  s.version      = "0.1"
+  s.version      = "0.2"
   s.summary      = "Custom UITextView class that performs as a standard UITextView but includes placeholder text."
 
   s.description  = <<-DESC
-                   A custom UITextView class that performs as a standard UITextView but also enables the inclusion of placeholder text.  The placeholder label is set uisng an NSAttributedString.  Very useful for multi-colors, fonts etc...
+                   A custom UITextView class that performs as a standard UITextView but also enables the inclusion of placeholder text.  The placeholder label is set uisng an NSAttributedString which enables use of multi-colors and mixed fonts.  Placeholder text can optionally be displayed over several lines or automatically resized to fit on one line.
+
 
 
                    DESC
@@ -62,7 +63,7 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-  s.platform     = :ios, "7.0"
+  s.platform     = :ios, "8.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -76,7 +77,7 @@ Pod::Spec.new do |s|
   #
 
   s.source       = { :git => "https://github.com/petetodd/BGSTextViewWithPlaceholder.git", 
-                     :tag => "0.1" }
+                     :tag => "0.2" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

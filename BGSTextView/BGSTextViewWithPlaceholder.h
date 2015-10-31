@@ -34,6 +34,8 @@
 @property int intLines; // The maximum number of lines to use to display text
 @property int intHeight; // Optional Height
 @property int intWidth; // Optional Width
+@property int position; // Optional position in Center = 1 or right aligned = 2
+
 
 @property BOOL sizeLblToFit; // Optional size label to fit
 

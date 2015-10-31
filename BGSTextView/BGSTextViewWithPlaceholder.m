@@ -167,6 +167,15 @@
         self.lblPlaceholder.adjustsFontSizeToFitWidth=YES;
         self.lblPlaceholder.minimumScaleFactor=0.1;
     }
+    
+    if (self.position == 1)
+    {
+        [self.lblPlaceholder setTextAlignment:NSTextAlignmentCenter];
+    }
+    if (self.position == 2)
+    {
+        [self.lblPlaceholder setTextAlignment:NSTextAlignmentRight];
+    }
 
 
     [self addSubview:self.lblPlaceholder];

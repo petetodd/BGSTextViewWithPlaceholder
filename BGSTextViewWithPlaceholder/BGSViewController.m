@@ -46,7 +46,10 @@
     
     // Test 3 - use 4 lines
     [self.tvTest3 setIntLines:4];
+    [self.tvTest3 setPosition:1];
+
     [self.tvTest3 setStrPlaceholder:str];
+    // Center text
 
 
 

@@ -16,11 +16,11 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "BGSTextViewWithPlaceholder"
-  s.version      = "0.4"
+  s.version      = "0.5"
   s.summary      = "Custom UITextView class that performs as a standard UITextView but includes placeholder text."
 
   s.description  = <<-DESC
-                   A custom UITextView class that performs as a standard UITextView but also enables the inclusion of placeholder text.  The placeholder label is set uisng an NSAttributedString which enables use of multi-colors and mixed fonts.  Placeholder text can optionally be displayed over several lines or automatically resized to fit on one line.
+                   A custom UITextView class that performs as a standard UITextView but also enables the inclusion of placeholder text.  The placeholder label is set using an NSAttributedString which enables use of multi-colors and mixed fonts.  Placeholder text can optionally be displayed over several lines or automatically resized to fit on one line.  If can also be centered or left (default) or right aligned.
 
 
 
@@ -54,7 +54,7 @@ Pod::Spec.new do |s|
   s.author             = { "Peter" => "peter@brightgreenstar.com" }
   # Or just: s.author    = "Peter"
   # s.authors            = { "Peter" => "email@address.com" }
-  # s.social_media_url   = "http://twitter.com/Peter"
+  s.social_media_url   = "http://twitter.com/PeteTodd"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -77,7 +77,7 @@ Pod::Spec.new do |s|
   #
 
   s.source       = { :git => "https://github.com/petetodd/BGSTextViewWithPlaceholder.git", 
-                     :tag => "0.4" }
+                     :tag => "0.5" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
